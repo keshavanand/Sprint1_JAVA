@@ -1,4 +1,4 @@
-package com.loops;
+package com.fdmgroup.loops;
 
 public class section3WhileLoops {
 	public static void main(String args[]){

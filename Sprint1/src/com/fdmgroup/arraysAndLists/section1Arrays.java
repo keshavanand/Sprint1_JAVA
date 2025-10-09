@@ -1,4 +1,4 @@
-package com.arraysAndLists;
+package com.fdmgroup.arraysAndLists;
 
 import java.util.Arrays;
 

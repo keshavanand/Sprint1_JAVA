@@ -1,11 +1,11 @@
-package com.methods;
+package com.fdmgroup.methods;
 
 public class section1Modularising {
 	
 	public static void main(String args[]){
 		// 1.1 Alien Colors
 		int points = getPoints("green");
-		System.out.println("You’ve scored "+points+" points!"); 
+		System.out.println("Youï¿½ve scored "+points+" points!"); 
 		
 		// 2.2 Summing numbers
 		System.out.println("Sum of numbers up to 5: "+ sumOfNumbersUpTo(5));

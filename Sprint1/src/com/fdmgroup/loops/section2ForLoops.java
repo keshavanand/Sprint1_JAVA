@@ -1,4 +1,4 @@
-package com.loops;
+package com.fdmgroup.loops;
 
 import java.util.ArrayList;
 import java.util.List;

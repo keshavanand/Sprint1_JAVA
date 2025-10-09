@@ -1,4 +1,4 @@
-package com.dataTypes;
+package com.fdmgroup.dataTypes;
 
 public class section2PrimitiveNumbers {
 	public static void main(String args[]){
