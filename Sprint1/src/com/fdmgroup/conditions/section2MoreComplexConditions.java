@@ -1,4 +1,4 @@
-package com.conditions;
+package com.fdmgroup.conditions;
 
 public class section2MoreComplexConditions {
 	public static void main(String args[]){

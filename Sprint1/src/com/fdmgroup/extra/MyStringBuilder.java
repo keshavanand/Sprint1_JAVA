@@ -1,4 +1,4 @@
-package com.extra;
+package com.fdmgroup.extra;
 
 import java.util.Arrays;
 
