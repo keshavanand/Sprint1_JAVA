@@ -1,4 +1,4 @@
-package com.fdmgroup.extra;
+package com.fdmgroup.polymorphismExercises.implementations.CustomStringBuilder;
 
 import java.util.Arrays;
 
@@ -89,6 +89,24 @@ public class MyStringBuilder {
 	
 	public String toString(){
 		return new String(array,0,count);
+	}
+	
+	public MyStringBuilder delete(int index) {
+		if(index >= count || index<0) return this;
+		
+		if(index == count-1) {
+			array[index] = ' ';
+		}
+		
+		for(int i = index;i<count-1;i++) {
+			array[index] = array[index+1];
+		}
+		
+		--count;
+		return this;
+	}
+	public void reverse() {
+		return;
 	}
 	
 }
