@@ -2,7 +2,12 @@ package com.fdmgroup.comparisonsExercises;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
+import java.util.PriorityQueue;
+import java.util.Set;
+import java.util.TreeSet;
+import java.util.stream.Collectors;
 
 public class Runner {
 	public static void main(String[] args){
@@ -45,6 +50,23 @@ public class Runner {
 		Collections.sort(books,new RatingPriceComparator());
 		System.out.println("\n-------------Sorted as per rating in desending and price in ascending order----------------\n");
 		printBooks(books);
+		
+		//1.4 Using Comparators with a TreeSet
+		Set<Book> bookSet = books.stream()
+				.collect(Collectors.toCollection(()-> new TreeSet<>(new RatingPriceComparator())));
+
+		System.out.println("\n-------------Tree set Sorted as per rating in desending and price in ascending order----------------\n");
+
+		for(Book book: bookSet) {
+			System.out.println(book);
+		}
+		
+		//1.5 Using a built in Comparator
+		PriorityQueue<Double> queue = getPriorityQueue(books.stream()
+										.map(b->b.getPrice()).collect(Collectors.toList()));
+		
+		System.out.println(queue);
+		
 	}
 	
 	public static void printBooks(List<Book> books){
@@ -52,5 +74,10 @@ public class Runner {
 			System.out.println(book);
 		}
 	}
-
+	
+	public static PriorityQueue<Double> getPriorityQueue(List<Double> values){
+		PriorityQueue<Double> priorityQueue = new PriorityQueue<>(Comparator.reverseOrder());
+		priorityQueue.addAll(values);
+		return priorityQueue;
+	}
 }
